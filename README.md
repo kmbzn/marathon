@@ -112,20 +112,15 @@ This project leverages demographic, environmental, and in-race behavioral data t
 ### Installation & Execution
 
 1. 리포지토리를 clone합니다.
-
 ```bash
 git clone https://github.com/kmbzn/marathon.git)
 cd marathon
 ```
-
 2. 필요한 라이브러리 및 의존성 파일을 설치합니다.
-
 ```bash
 pip install -r requirements.txt
 ```
-
 3. (optional) 전처리 및 모델 학습 스크립트를 실행하거나 `notebooks/` 디렉토리의 jupyter notebook을 실행할 수 있습니다.
-
 ```bash
 jupyter notebook notebooks/01_eda_visualization.ipynb
 ```
