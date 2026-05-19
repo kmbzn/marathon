@@ -4,6 +4,8 @@
 
 마라톤은 인간의 한계에 도전하는 스포츠로, 철저한 페이스 조절(Pacing Strategy)과 환경적 요인(Environmental Factors)이 완주 성공의 여부를 결정합니다. 본 프로젝트는 Kaggle에 공개된 보스턴 마라톤 데이터셋을 바탕으로, 러너의 개인 프로필과 구간별 데이터가 최종 완주 시간(Official Finish Time)에 미치는 영향을 심층 분석합니다.
 
+나이, 성별, 구간별 페이스, 기온 등의 변수를 활용해 완주 시간 예측합니다. Kaggle에 보스턴 마라톤 데이터셋을 토대로 시각화까지 합니다.
+
 This project leverages demographic, environmental, and in-race behavioral data to build robust predictive models. We focus not only on regression accuracy but also on explaining the phenomenon of **"Hitting the Wall" (30km 지점 이후의 급격한 페이스 저하)** through advanced data visualization and feature engineering.
 
 ---
