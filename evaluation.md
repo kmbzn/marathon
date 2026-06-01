@@ -34,4 +34,3 @@ nav_order: 5
 | XGBoost | – | – |
 | LightGBM | – | – |
 
-> 🚧 표의 수치와 해석을 6/9 전까지 채우세요.
