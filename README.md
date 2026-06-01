@@ -2,6 +2,8 @@
 
 ![](https://images.unsplash.com/photo-1596727362302-b8d891c42ab8?q=80&w=1085&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)
 
+<인구통계학적 특성과 대기 온도를 반영한 머신러닝 기반 마라톤 완주 시간 예측>
+
 마라톤은 인간의 한계에 도전하는 스포츠로, 철저한 페이스 조절(Pacing Strategy)과 환경적 요인(Environmental Factors)이 완주 성공의 여부를 결정합니다. 본 프로젝트는 Kaggle에 공개된 보스턴 마라톤 데이터셋을 바탕으로, 러너의 개인 프로필과 구간별 데이터가 최종 완주 시간(Official Finish Time)에 미치는 영향을 심층 분석합니다.
 
 나이, 성별, 구간별 페이스, 기온 등의 변수를 활용해 완주 시간 예측합니다. Kaggle에 보스턴 마라톤 데이터셋을 토대로 시각화까지 합니다.
@@ -26,9 +28,9 @@ This project leverages demographic, environmental, and in-race behavioral data t
 ## Key Objectives
 
 1. **Exploratory Data Analysis**
-  * 나이(Age)와 성별(Gender)에 따른 마라톤 페이스 유지 능력의 상관관계 도출
-  * 기온(Temperature) 및 날씨 변화가 러너들의 후반부 기록 저하에 미치는 영향 시각화
-2. **Feature Engineering)**
+  * 나이(Age)와 성별(Gender)에 따른 마라톤 페이스 유지 능력의 상관관계 도출 - 인구통계학적 특성
+  * 기온(Temperature) 및 날씨 변화가 러너들의 후반부 기록 저하에 미치는 영향 시각화 - 대기 온도
+2. **Feature Engineering**
   * 구간별 페이스 데이터를 활용하여 러너의 페이스 일관성을 나타내는 'Fatigue Index(피로도 지수)' 및 'Pacing Variance' 산출
 3. **Predictive Modeling**
   * 선형 회귀(Linear Regression)부터 트리 기반 앙상블 모델(Random Forest, XGBoost, LightGBM)까지 다양한 회귀 알고리즘 비교 평가
