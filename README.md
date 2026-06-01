@@ -13,9 +13,9 @@ This project leverages demographic, environmental, and in-race behavioral data t
 각 항목을 클릭하여 상세 분석 과정을 확인하세요.
 Click each item to view the detailed analysis process.
 
-* [01_eda_visualization.ipynb](https://nbviewer.org/github/kmbzn/marathon/blob/main/notebooks/01_eda_visualization.ipynb)
+* [`01_eda_visualization.ipynb`](notebooks/01_eda_visualization.ipynb)
   - 데이터의 기초 통계 확인 및 성별/나이/기온과 완주 시간의 상관관계 시각화
-* [02_model_training.ipynb](https://nbviewer.org/github/kmbzn/marathon/blob/main/notebooks/02_model_training.ipynb)
+* [`02_preprocessing_and_feature_engineering.ipynb`](notebooks/02_preprocessing_and_feature_engineering.ipynb)
   - 피로도 지수(Fatigue Index) 생성 및 머신러닝 모델(XGBoost 등) 학습/평가
 
 ---
