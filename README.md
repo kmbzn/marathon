@@ -1,4 +1,5 @@
 # Project Overview
+
 ## 인구통계학적 특성과 대기 온도를 반영한 머신러닝 기반 마라톤 완주 시간 예측
 
 ![](https://images.unsplash.com/photo-1596727362302-b8d891c42ab8?q=80&w=1085&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)
@@ -10,13 +11,15 @@
 This project leverages demographic, environmental, and in-race behavioral data to build robust predictive models. We focus not only on regression accuracy but also on explaining the phenomenon of **"Hitting the Wall" (30km 지점 이후의 급격한 페이스 저하)** through advanced data visualization and feature engineering.
 
 ## 📊 Project Analysis Notebooks
-각 항목을 클릭하여 상세 분석 과정을 확인하세요.
-Click each item to view the detailed analysis process.
+각 항목을 클릭하여 Google Colab에서 바로 확인하세요.
 
-* [`01_eda_visualization.ipynb`](notebooks/01_eda_visualization.ipynb)
+Click each item to view it directly in Google Colab.
+
+- [`01_eda_visualization.ipynb`](https://colab.research.google.com/github/kmbzn/marathon/blob/main/notebooks/01_eda_visualization.ipynb)
   - 데이터의 기초 통계 확인 및 성별/나이/기온과 완주 시간의 상관관계 시각화
-* [`02_preprocessing_and_feature_engineering.ipynb`](notebooks/02_preprocessing_and_feature_engineering.ipynb)
-  - 피로도 지수(Fatigue Index) 생성 및 머신러닝 모델(XGBoost 등) 학습/평가
+
+- [`02_preprocessing_and_feature_engineering.ipynb`](https://colab.research.google.com/github/kmbzn/marathon/blob/main/notebooks/02_preprocessing_and_feature_engineering.ipynb)
+  - 데이터 전처리(시간 포맷 변환 및 결측치 처리) 및 'Fatigue Index(피로도 지수)'를 통한 페이스 일관성 지표 설계
 
 ---
 
@@ -39,7 +42,7 @@ Click each item to view the detailed analysis process.
 ├── data/                  # Raw and processed dataset files
 ├── notebooks/             # Jupyter Notebooks for EDA and prototyping
 │   ├── 01_eda_visualization.ipynb
-│   └── 02_model_training.ipynb
+│   └── 02_preprocessing_and_feature_engineering.ipynb
 ├── src/                   # Source code for production
 │   ├── __init__.py
 │   ├── preprocessing.py   # Data cleaning and engineering
@@ -54,7 +57,7 @@ Click each item to view the detailed analysis process.
 ## Key Objectives
 
 1. **Exploratory Data Analysis**
-  - 나이(Age)와 성별(Gender)에 따른 마라톤 페이스 유지 능력의 상관관계 도출 - 인구통계학적 특성
+  - 나이(`Age`)와 성별(`Gender`)에 따른 마라톤 페이스 유지 능력의 상관관계 도출 - 인구통계학적 특성
   - 기온(Temperature) 및 날씨 변화가 러너들의 후반부 기록 저하에 미치는 영향 시각화 - 대기 온도
 2. **Feature Engineering**
   - 구간별 페이스 데이터를 활용하여 러너의 페이스 일관성을 나타내는 'Fatigue Index(피로도 지수)' 및 'Pacing Variance' 산출
@@ -124,16 +127,16 @@ Click each item to view the detailed analysis process.
 
 ### Installation & Execution
 
-1. 리포지토리를 clone합니다.
+1. Repository를 clone합니다.
 ```bash
 git clone https://github.com/kmbzn/marathon.git)
 cd marathon
 ```
-2. 필요한 라이브러리 및 의존성 파일을 설치합니다.
+2. 필요한 library 및 의존성 파일을 설치합니다.
 ```bash
 pip install -r requirements.txt
 ```
-3. (optional) 전처리 및 모델 학습 스크립트를 실행하거나 `notebooks/` 디렉토리의 jupyter notebook을 실행할 수 있습니다.
+3. (optional) 전처리 및 모델 학습 script를 실행하거나 `notebooks/` 디렉토리의 jupyter notebook을 실행할 수 있습니다.
 ```bash
 jupyter notebook notebooks/01_eda_visualization.ipynb
 ```
