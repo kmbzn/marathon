@@ -26,7 +26,6 @@ description: 프로젝트 개요 및 목차
 | **김병준** | Hanyang Univ. CSE | `email@hanyang.ac.kr` |
 | **임성현** | Hanyang Univ. CSE | `email@hanyang.ac.kr` |
 
-> 🚧 각자 실제 이메일로 교체하세요.
 
 ---
 
