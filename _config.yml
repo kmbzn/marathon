@@ -1,0 +1,27 @@
+# ── Site ───────────────────────────────────────────────
+title: 마라톤 완주 시간 예측
+description: 인구통계학적 특성과 대기 온도를 반영한 머신러닝 기반 마라톤 완주 시간 예측
+url: "https://aix-project.kro.kr"
+lang: ko
+
+# ── Theme: just-the-docs (GitHub Pages remote theme) ──
+remote_theme: just-the-docs/just-the-docs
+plugins:
+  - jekyll-remote-theme
+
+# ── just-the-docs 옵션 ─────────────────────────────────
+color_scheme: light
+search_enabled: true
+heading_anchors: true
+aux_links:
+  "GitHub Repo":
+    - "https://github.com/kmbzn/marathon"
+aux_links_new_tab: true
+footer_content: "Hanyang Univ. CSE · AI+X: Deep Learning · 2026 Spring"
+
+# ── 빌드 제외 ──────────────────────────────────────────
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
