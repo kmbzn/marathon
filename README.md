@@ -1,14 +1,22 @@
 # Project Overview
+## 인구통계학적 특성과 대기 온도를 반영한 머신러닝 기반 마라톤 완주 시간 예측
 
 ![](https://images.unsplash.com/photo-1596727362302-b8d891c42ab8?q=80&w=1085&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)
-
-<인구통계학적 특성과 대기 온도를 반영한 머신러닝 기반 마라톤 완주 시간 예측>
 
 마라톤은 인간의 한계에 도전하는 스포츠로, 철저한 페이스 조절(Pacing Strategy)과 환경적 요인(Environmental Factors)이 완주 성공의 여부를 결정합니다. 본 프로젝트는 Kaggle에 공개된 보스턴 마라톤 데이터셋을 바탕으로, 러너의 개인 프로필과 구간별 데이터가 최종 완주 시간(Official Finish Time)에 미치는 영향을 심층 분석합니다.
 
 나이, 성별, 구간별 페이스, 기온 등의 변수를 활용해 완주 시간 예측합니다. Kaggle에 보스턴 마라톤 데이터셋을 토대로 시각화까지 합니다.
 
 This project leverages demographic, environmental, and in-race behavioral data to build robust predictive models. We focus not only on regression accuracy but also on explaining the phenomenon of **"Hitting the Wall" (30km 지점 이후의 급격한 페이스 저하)** through advanced data visualization and feature engineering.
+
+## 📊 Project Analysis Notebooks
+각 항목을 클릭하여 상세 분석 과정을 확인하세요.
+Click each item to view the detailed analysis process.
+
+* [01_eda_visualization.ipynb](https://nbviewer.org/github/kmbzn/marathon/blob/main/notebooks/01_eda_visualization.ipynb)
+  - 데이터의 기초 통계 확인 및 성별/나이/기온과 완주 시간의 상관관계 시각화
+* [02_model_training.ipynb](https://nbviewer.org/github/kmbzn/marathon/blob/main/notebooks/02_model_training.ipynb)
+  - 피로도 지수(Fatigue Index) 생성 및 머신러닝 모델(XGBoost 등) 학습/평가
 
 ---
 
@@ -22,6 +30,24 @@ This project leverages demographic, environmental, and in-race behavioral data t
 | **성시훈** | Hanyang Univ. CSE |
 | **김병준** | Hanyang Univ. CSE |
 | **임성현** | Hanyang Univ. CSE |
+
+---
+
+## 📁 Project Structure
+
+```text
+├── data/                  # Raw and processed dataset files
+├── notebooks/             # Jupyter Notebooks for EDA and prototyping
+│   ├── 01_eda_visualization.ipynb
+│   └── 02_model_training.ipynb
+├── src/                   # Source code for production
+│   ├── __init__.py
+│   ├── preprocessing.py   # Data cleaning and engineering
+│   └── models.py          # Model architecture and evaluation
+├── README.md              # Project documentation
+└── requirements.txt       # Dependency list
+
+```
 
 ---
 
@@ -89,23 +115,6 @@ This project leverages demographic, environmental, and in-race behavioral data t
 
 ---
 
-## 📁 Project Structure
-
-```text
-├── data/                  # Raw and processed dataset files
-├── notebooks/             # Jupyter Notebooks for EDA and prototyping
-│   ├── 01_eda_visualization.ipynb
-│   └── 02_model_training.ipynb
-├── src/                   # Source code for production
-│   ├── __init__.py
-│   ├── preprocessing.py   # Data cleaning and engineering
-│   └── models.py          # Model architecture and evaluation
-├── README.md              # Project documentation
-└── requirements.txt       # Dependency list
-
-```
-
----
 
 ## 🚀 How to Run
 
