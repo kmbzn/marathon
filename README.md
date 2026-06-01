@@ -4,7 +4,7 @@
 
 ![](https://images.unsplash.com/photo-1596727362302-b8d891c42ab8?q=80&w=1085&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)
 
-마라톤은 인간의 한계에 도전하는 스포츠로, 철저한 페이스 조절(Pacing Strategy)과 환경적 요인(Environmental Factors)이 완주 성공의 여부를 결정합니다. 본 프로젝트는 Kaggle에 공개된 보스턴 마라톤 데이터셋을 바탕으로, 러너의 개인 프로필과 구간별 데이터가 최종 완주 시간(Official Finish Time)에 미치는 영향을 심층 분석합니다.
+마라톤은 인간의 한계에 도전하는 스포츠로, 철저한 페이스 조절과 환경적 요인이 완주 성공의 여부를 결정합니다. 본 Project는 Kaggle에 공개된 보스턴 마라톤 데이터셋을 바탕으로, 러너의 개인 프로필과 구간별 데이터가 최종 완주 시간(Official Finish Time)에 미치는 영향을 심층 분석합니다.
 
 나이, 성별, 구간별 페이스, 기온 등의 변수를 활용해 완주 시간 예측합니다. Kaggle에 보스턴 마라톤 데이터셋을 토대로 시각화까지 합니다.
 
@@ -21,11 +21,9 @@ Click each item to view it directly in Google Colab.
 - [`02_preprocessing_and_feature_engineering.ipynb`](https://colab.research.google.com/github/kmbzn/marathon/blob/main/notebooks/02_preprocessing_and_feature_engineering.ipynb)
   - 데이터 전처리(시간 포맷 변환 및 결측치 처리) 및 'Fatigue Index(피로도 지수)'를 통한 페이스 일관성 지표 설계
 
----
-
 ## Team Members
 
-본 프로젝트는 한양대학교 컴퓨터소프트웨어학부 학생들로 구성된 팀에 의해 공동 관리 및 개발됩니다.
+본 Project는 한양대학교 컴퓨터소프트웨어학부 학생들로 구성된 팀에 의해 공동 관리 및 개발됩니다.
 
 | 이름 | 소속
 | --- | ---
@@ -34,12 +32,11 @@ Click each item to view it directly in Google Colab.
 | **김병준** | Hanyang Univ. CSE |
 | **임성현** | Hanyang Univ. CSE |
 
----
-
 ## 📁 Project Structure
 
 ```text
 ├── data/                  # Raw and processed dataset files
+│   └── marathon_results_2015.csv
 ├── notebooks/             # Jupyter Notebooks for EDA and prototyping
 │   ├── 01_eda_visualization.ipynb
 │   └── 02_preprocessing_and_feature_engineering.ipynb
@@ -51,8 +48,6 @@ Click each item to view it directly in Google Colab.
 └── requirements.txt       # Dependency list
 
 ```
-
----
 
 ## Key Objectives
 
@@ -66,11 +61,9 @@ Click each item to view it directly in Google Colab.
 4. **Actionable Insights Generation**
   - 분석 결과를 바탕으로 아마추어 러너 및 코칭 스태프가 참조할 수 있는 데이터 기반의 최적 페이스 전략 제안
 
----
-
 ## 📊 Dataset Description
 
-본 프로젝트는 Kaggle의 **Boston Marathon Dataset**을 기반으로 합니다. 데이터셋은 다음과 같은 핵심 변수(Features)들을 포함하고 있습니다.
+본 Project는 Kaggle의 **Boston Marathon Dataset**을 기반으로 합니다. 데이터셋은 다음과 같은 features를 포함하고 있습니다.
 
 ### 1. Demographic Data
 
@@ -91,8 +84,6 @@ Click each item to view it directly in Google Colab.
 
 - `Official Time`: 최종 마라톤 완주 시간 (HH:MM:SS 형식을 초 단위 변환하여 사용)
 
----
-
 ## 🛠 Methodology & Pipeline
 
 ### 1. Data Preprocessing
@@ -103,7 +94,7 @@ Click each item to view it directly in Google Colab.
 
 ### 2. Feature Engineering
 
-후반부 기록 예측의 정확도를 높이기 위해 수학적 지표를 변수로 추가합니다.
+후반부 기록 예측의 정확도를 높이기 위해 지표를 변수로 추가합니다.
 
 - **Fatigue Index (피로 지수):** 30K 이후 페이스와 초반 10K 페이스의 변화율을 측정합니다.
 
@@ -116,14 +107,11 @@ Click each item to view it directly in Google Colab.
 - Random Forest Regressor
 - XGBoost / LightGBM Regressor
 
----
-
-
 ## 🚀 How to Run
 
 ### Prerequisites
 
-본 프로젝트를 local 환경에서 실행하려면 `Python 3.8` 이상의 버전이 필요합니다.
+본 Project를 local 환경에서 실행하려면 `Python 3.8` 이상의 버전이 필요합니다.
 
 ### Installation & Execution
 
@@ -143,4 +131,4 @@ jupyter notebook notebooks/01_eda_visualization.ipynb
 
 ## 📜 License
 
-This project is licensed under the **MIT License** - see the [LICENSE](https://www.google.com/search?q=LICENSE) file for details. 본 프로젝트의 코드와 분석 결과는 MIT 라이선스 하에 자유로운 복사, 수정, 배포 및 상업적 이용이 가능합니다.
+This project is licensed under the **MIT License** - see the [LICENSE](https://www.google.com/search?q=LICENSE) file for details. 본 Project의 코드와 분석 결과는 MIT 라이선스 하에 자유로운 복사, 수정, 배포 및 상업적 이용이 가능합니다.
