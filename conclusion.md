@@ -1,13 +1,5 @@
 # VI. Conclusion
 
-
-<details open markdown="block">
-  <summary>목차</summary>
-{: .text-delta }
-- TOC
-{:toc}
-</details>
-
 ---
 
 ## Discussion
