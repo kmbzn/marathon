@@ -12,21 +12,6 @@ description: 프로젝트 개요 및 목차
 한양대학교 컴퓨터소프트웨어학부 · AI+X: Deep Learning (2026 Spring)
 {: .fs-5 .fw-300 }
 
-[프로젝트 시작하기]({% link proposal.md %}){: .btn .btn-primary .mr-2 }
-[GitHub Repo](https://github.com/kmbzn/marathon){: .btn }
-
----
-
-## Members
-
-| 이름 | 소속 | 이메일 |
-|:-----|:-----|:-------|
-| **양종빈** | Hanyang Univ. CSE | `email@hanyang.ac.kr` |
-| **성시훈** | Hanyang Univ. CSE | `email@hanyang.ac.kr` |
-| **김병준** | Hanyang Univ. CSE | `email@hanyang.ac.kr` |
-| **임성현** | Hanyang Univ. CSE | `email@hanyang.ac.kr` |
-
-
 ---
 
 ## 목차 (Table of Contents)
