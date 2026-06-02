@@ -1,11 +1,5 @@
----
-title: VI. Conclusion
-layout: default
-nav_order: 7
----
-
 # VI. Conclusion
-{: .no_toc }
+
 
 <details open markdown="block">
   <summary>목차</summary>
