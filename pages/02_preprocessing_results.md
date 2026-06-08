@@ -114,5 +114,3 @@ Official Time과의 상관계수: 0.412
 총 학습 샘플: **26,357개**
 
 ---
-
-[← EDA 결과](01_eda_results.md) | [모델링 결과 →](03_modeling_results.md)

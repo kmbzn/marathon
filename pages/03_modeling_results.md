@@ -94,5 +94,3 @@ Ridge Full Model의 잔차(Residual) 분포는 평균 0 근처에서 대칭적�
 ```
 
 ---
-
-[← 전처리 결과](02_preprocessing_results.md) | [인사이트 →](04_insights.md)
