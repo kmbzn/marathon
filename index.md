@@ -25,6 +25,19 @@ description: 프로젝트 개요 및 목차
 
 ---
 
+## Team Members
+
+한양대학교 컴퓨터소프트웨어학부 · AI+X: Deep Learning (2026 Spring)
+
+| 이름 | 소속 |
+| --- | --- |
+| **양종빈** | Hanyang Univ. CSE |
+| **성시훈** | Hanyang Univ. CSE |
+| **김병준** | Hanyang Univ. CSE |
+| **임성현** | Hanyang Univ. CSE |
+
+---
+
 ## Overview
 
 마라톤은 인간의 한계에 도전하는 스포츠로, 철저한 페이스 조절(Pacing Strategy)과 환경적 요인(Environmental Factors)이 완주 성공 여부를 결정합니다. 본 프로젝트는 Kaggle에 공개된 **보스턴 마라톤 데이터셋**을 바탕으로, 러너의 개인 프로필과 구간별 데이터가 최종 완주 시간(Official Finish Time)에 미치는 영향을 심층 분석합니다.
