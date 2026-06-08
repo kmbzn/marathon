@@ -1,3 +1,10 @@
+---
+title: "모델 학습 & 평가 결과"
+layout: default
+nav_order: 3
+parent: "IV. Evaluation & Analysis"
+---
+
 # 모델 학습 및 평가 결과
 
 > **분석 노트북**: [`03_modeling_and_evaluation.ipynb`](https://colab.research.google.com/github/kmbzn/marathon/blob/main/notebooks/03_modeling_and_evaluation.ipynb)

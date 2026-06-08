@@ -1,3 +1,10 @@
+---
+title: "전처리 & 피처 엔지니어링 결과"
+layout: default
+nav_order: 2
+parent: "IV. Evaluation & Analysis"
+---
+
 # 데이터 전처리 및 피처 엔지니어링 결과
 
 > **분석 노트북**: [`02_preprocessing_and_feature_engineering.ipynb`](https://colab.research.google.com/github/kmbzn/marathon/blob/main/notebooks/02_preprocessing_and_feature_engineering.ipynb)

@@ -1,3 +1,10 @@
+---
+title: "EDA 결과"
+layout: default
+nav_order: 1
+parent: "IV. Evaluation & Analysis"
+---
+
 # 탐색적 데이터 분석 결과 (EDA)
 
 > **분석 노트북**: [`01_eda_visualization.ipynb`](https://colab.research.google.com/github/kmbzn/marathon/blob/main/notebooks/01_eda_visualization.ipynb)

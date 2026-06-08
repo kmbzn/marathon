@@ -1,3 +1,10 @@
+---
+title: "인사이트 & 결론"
+layout: default
+nav_order: 4
+parent: "IV. Evaluation & Analysis"
+---
+
 # 분석 결론 및 인사이트
 
 ---
