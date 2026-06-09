@@ -42,7 +42,6 @@ Ridge/Lasso 등 선형 회귀 모델 대비 XGBoost·LightGBM이 유의미하게
 - 구간 페이스 시퀀스를 시계열로 처리하는 LSTM 기반 모델을 실험해 예측 정확도를 개선한다.
 - 예측 모델을 기반으로 목표 완주 시간에 최적화된 구간별 페이스 플랜을 역산하는 추천 시스템으로 확장한다.
 
-
 ## Contributions
 
 | 멤버 | 이메일 | 담당 |
@@ -51,3 +50,13 @@ Ridge/Lasso 등 선형 회귀 모델 대비 XGBoost·LightGBM이 유의미하게
 | 성시훈 | sihun0415@gmail.com | EDA & 시각화 — 나이/성별/기온 분석, Hitting the Wall 시각화, 구간 페이스 패턴 탐색 |
 | 김병준 | kmbzn24@gmail.com | Blog 프론트 디자인, Feature Engineering & 모델링 — Fatigue Index 설계, Ridge/Lasso/RF/XGBoost/LightGBM 학습 및 튜닝 |
 | 임성현 | beo00325@gmail.com | 평가 & 인사이트 — RMSE/R² 비교, 페이스 전략 도출, 문서화 |
+
+## 🎥 Video
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; margin: 1em 0;">
+  <iframe src="https://www.youtube.com/embed/VIDEO_ID"
+          title="발표 영상"
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+</div>
