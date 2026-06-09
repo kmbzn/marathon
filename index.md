@@ -46,12 +46,12 @@ AI+X: Deep Learning (2026 Spring)
 
 ## Team Members
 
-| 이름 | 소속 |
-| --- | --- |
-| **양종빈** | Hanyang Univ. CSE |
-| **성시훈** | Hanyang Univ. CSE |
-| **김병준** | Hanyang Univ. CSE |
-| **임성현** | Hanyang Univ. CSE |
+| 이름 | 소속 | 이메일 |
+| --- | --- | --- |
+| **양종빈** | Hanyang Univ. CSE | goldon102@gmail.com |
+| **성시훈** | Hanyang Univ. CSE | sihun0415@gmail.com |
+| **김병준** | Hanyang Univ. CSE | kmbzn24@gmail.com |
+| **임성현** | Hanyang Univ. CSE | beo00325@gmail.com |
 
 ---
 
