@@ -11,7 +11,7 @@ parent: "IV. Evaluation & Analysis"
 
 ---
 
-## 데이터셋 개요
+## Dataset Overview
 
 | 항목 | 값 |
 |------|-----|
@@ -24,7 +24,7 @@ parent: "IV. Evaluation & Analysis"
 
 ---
 
-## 완주 시간 분포
+## Finish Time Distribution
 
 ```
 Official Time 기초 통계
@@ -40,7 +40,7 @@ Official Time 기초 통계
 
 ---
 
-## 성별에 따른 완주 시간
+## Finish Time by Gender
 
 | 성별 | 평균 완주 시간 |
 |------|----------------|
@@ -51,7 +51,7 @@ Official Time 기초 통계
 
 ---
 
-## 나이대별 평균 완주 시간
+## Average Finish Time by Age Group
 
 | 나이대 | 평균 완주 시간 |
 |--------|----------------|
@@ -65,7 +65,7 @@ Official Time 기초 통계
 
 ---
 
-## 국가별 참가자 현황
+## Participants by Country
 
 | 순위 | 국가 | 참가자 수 |
 |------|------|-----------|
@@ -79,7 +79,7 @@ Official Time 기초 통계
 
 ---
 
-## 주요 변수 간 상관관계
+## Feature Correlation
 
 | 피처 | Official Time 상관계수 |
 |------|------------------------|

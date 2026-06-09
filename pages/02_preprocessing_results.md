@@ -32,7 +32,7 @@ parent: "IV. Evaluation & Analysis"
 
 ---
 
-## 시간 변환 로그
+## Time Conversion Log
 
 ```
 전처리 전: 26,598행  →  전처리 후: 26,357행  (제거: 241행)
@@ -44,7 +44,7 @@ parent: "IV. Evaluation & Analysis"
 
 ---
 
-## Fatigue Index (피로도 지수)
+## Fatigue Index
 
 **정의**: 후반 10K(30K→40K) 구간의 페이스 ÷ 초반 10K(0K→10K) 페이스
 
@@ -59,7 +59,7 @@ Fatigue_Index = (40K_s - 30K_s) / 10  ÷  (10K_s / 10)
 | FI > 1.0 | 후반부 페이스 저하 (히팅 더 월 가능성) |
 | FI < 1.0 | 후반부 페이스 향상 (네거티브 스플릿) |
 
-### 분포 통계
+### Distribution Statistics
 
 ```
 Fatigue Index 평균:   1.126
@@ -90,7 +90,7 @@ FI > 1.2  (페이스 20% 이상 저하):  20.5%  → 5명 중 1명이 심각한 
 
 ---
 
-## Pacing Variance (페이스 일관성 지표)
+## Pacing Variance
 
 pace (sec/km)의 표준편차로 계산합니다. 값이 작을수록 일정한 페이스를 유지한 러너입니다.
 
@@ -101,7 +101,7 @@ Official Time과의 상관계수: 0.412
 
 ---
 
-## 최종 피처 목록
+## Final Feature List
 
 | 피처 | 유형 | 설명 |
 |------|------|------|

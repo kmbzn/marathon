@@ -10,7 +10,7 @@ has_children: true
 
 ## 1. EDA
 
-### 1-1. 나이·성별에 따른 완주 시간 분포
+### 1-1. Finish Time Distribution by Age & Gender
 
 ![나이대별 완주 시간 분포]({{ '/assets/img/age_distribution.png' | relative_url }})
 
@@ -19,7 +19,7 @@ has_children: true
 - 60세 이상 그룹은 완주 시간 분포의 분산이 커지며, 개인차가 두드러졌다.
 - 성별 변수는 단독으로도 완주 시간과 통계적으로 유의미한 상관관계를 보였다 (p < 0.001).
 
-### 1-2. 기온에 따른 후반부 기록 저하
+### 1-2. Late-Race Pace Degradation by Temperature
 
 ![기온별 후반 페이스 저하율]({{ '/assets/img/temp_pace_degradation.png' | relative_url }})
 
@@ -27,7 +27,7 @@ has_children: true
 - 기온과 완주 시간 사이에는 **단순 선형 관계가 아닌 비선형 임계 패턴**이 관찰되었다. 특히 20°C 이상에서 기록 저하가 급격히 심화되는 경향이 보였다.
 - 기온이 높은 연도일수록 **DNF(Did Not Finish)** 비율도 증가하는 상관관계가 확인되었다.
 
-### 1-3. Hitting the Wall — 구간별 페이스 저하 패턴
+### 1-3. Hitting the Wall — Pace Degradation by Split
 
 ![구간별 페이스 저하 히트맵]({{ '/assets/img/split_heatmap.png' | relative_url }})
 
@@ -35,7 +35,7 @@ has_children: true
 - 초반 10K 페이스가 빠를수록(과속 출발) 30K 이후 페이스 저하폭이 크게 나타났으며, 이는 페이스 일관성의 중요성을 시사한다.
 - 파생 변수 **Fatigue Index** (30K 이후 페이스 / 초반 10K 페이스)의 분포는 완주 시간과 강한 양의 상관관계를 보였다 (r ≈ 0.81).
 
-### 1-4. 주요 변수 간 상관관계
+### 1-4. Feature Correlation
 
 ![변수 상관관계 히트맵]({{ '/assets/img/correlation_heatmap.png' | relative_url }})
 
@@ -49,7 +49,7 @@ has_children: true
 
 ---
 
-## 2. Feature Engineering 결과
+## 2. Feature Engineering Results
 
 ### 2-1. Fatigue Index
 - 값이 **1.0에 가까울수록** 페이스를 일관되게 유지한 러너
@@ -62,7 +62,7 @@ has_children: true
 
 ---
 
-## 3. 모델 성능 비교
+## 3. Model Performance Comparison
 
 > RMSE unit: seconds. Values in parentheses are in minutes.
 
@@ -76,18 +76,18 @@ has_children: true
 
 > 📌 선행 연구(Boston Marathon 2015–2017 데이터 앙상블 모델)에서 보고된 RMSE 11.06분, R² 0.928과 비교해 LightGBM 단일 모델이 유사하거나 우수한 수준의 성능을 달성하였다.
 
-### 3-1. 모델별 성능 시각화
+### 3-1. Performance Visualization
 
 ![모델 성능 비교 바 차트]({{ '/assets/img/model_comparison.png' | relative_url }})
 
-### 3-2. LightGBM — 실제값 vs 예측값
+### 3-2. LightGBM — Predicted vs Actual
 
 ![예측값 vs 실제값 산점도]({{ '/assets/img/pred_vs_actual.png' | relative_url }})
 
 - 대부분의 예측값이 **y = x 대각선 근처에 밀집**하여 안정적인 예측력을 확인
 - 완주 시간 **4시간 이상 구간**에서 예측 오차가 다소 증가하는 경향 (이 구간 러너의 페이스 변동성이 크기 때문)
 
-### 3-3. Feature Importance (LightGBM 기준)
+### 3-3. Feature Importance (LightGBM)
 
 ![변수 중요도]({{ '/assets/img/feature_importance.png' | relative_url }})
 
@@ -104,7 +104,7 @@ has_children: true
 
 ---
 
-## 4. 인사이트 요약
+## 4. Insights Summary
 
 - **페이스 일관성이 기록을 결정한다**: Fatigue Index와 Pacing Variance 두 파생 변수가 나이·성별·기온보다 완주 시간 예측에 더 높은 기여도를 보였다. 이는 "얼마나 빠른가"보다 "얼마나 일정하게 달리는가"가 핵심임을 의미한다.
 - **Half의 압도적 예측력**: 21km 지점 기록 하나만으로도 최종 완주 시간의 상당 부분을 설명할 수 있었다.

@@ -11,7 +11,7 @@ parent: "IV. Evaluation & Analysis"
 
 ---
 
-## 실험 설계
+## Experimental Setup
 
 두 가지 예측 시나리오를 비교합니다.
 
@@ -26,7 +26,7 @@ parent: "IV. Evaluation & Analysis"
 
 ---
 
-## Full Model 결과
+## Full Model Results
 
 | 모델 | RMSE | R² |
 |------|------|-----|
@@ -42,7 +42,7 @@ parent: "IV. Evaluation & Analysis"
 
 ---
 
-## Early Model 결과 (10K까지만 사용)
+## Early Model Results (up to 10K)
 
 | 모델 | RMSE | R² |
 |------|------|-----|
@@ -53,7 +53,7 @@ parent: "IV. Evaluation & Analysis"
 
 ---
 
-## 모델 성능 로그
+## Model Performance Log
 
 ```
 === Full Model ===
@@ -68,7 +68,7 @@ RF (Early)          RMSE = 3.99 min         R² = 0.9901
 
 ---
 
-## Random Forest 피처 중요도
+## Random Forest Feature Importance
 
 | 순위 | 피처 | 중요도 |
 |------|------|--------|
@@ -83,7 +83,7 @@ RF (Early)          RMSE = 3.99 min         R² = 0.9901
 
 ---
 
-## 예측 정확도 분석
+## Prediction Accuracy Analysis
 
 Ridge Full Model의 Residual 분포는 평균 0 근처에서 대칭적인 정규분포를 보이며, 이는 모델이 체계적인 편향 없이 잘 작동하고 있음을 나타냅니다.
 

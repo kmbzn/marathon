@@ -12,7 +12,7 @@ nav_order: 4
 분석에 바로 사용하기 어려운 요소들이 포함되어 있습니다.
 아래 순서로 전처리 파이프라인을 구성하였습니다.
 
-### 1-1. 결측치 처리
+### 1-1. Handling Missing Values
 
 DNF(Did Not Finish) 참가자는 30K, 35K, 40K 등 후반 구간 시간이 결측값으로
 기록됩니다. 이 레코드들은 **예측 모델 학습 대상에서 제외**하되,
@@ -26,7 +26,7 @@ df = df.dropna(subset=['Official Time'])
 print(df.isnull().sum())
 ```
 
-### 1-2. 시간 데이터 변환
+### 1-2. Time Data Conversion
 
 모든 구간 시간은 `HH:MM:SS` 문자열로 수록되어 있습니다.
 회귀 모델 입력을 위해 **seconds 단위 정수형**으로 변환합니다.
@@ -46,7 +46,7 @@ for col in time_cols:
     df[col] = df[col].apply(time_to_seconds)
 ```
 
-### 1-3. 범주형 변수 인코딩
+### 1-3. Categorical Encoding
 
 | 변수 | 처리 방법 | 비고 |
 |:---|:---|:---|
@@ -86,7 +86,7 @@ X_train, X_test, y_train, y_test = train_test_split(
 원본 변수만으로는 포착하기 어려운 **페이스 전략의 질적 차이**를
 수치화하기 위해 아래 두 가지 파생 변수를 추가합니다.
 
-### 2-1. Fatigue Index (피로 지수)
+### 2-1. Fatigue Index
 
 30K 이후 구간의 평균 페이스를 초반 10K 페이스로 나눈 비율입니다.
 값이 클수록 후반에 급격히 느려진 것을 의미합니다.
@@ -110,7 +110,7 @@ df['Fatigue_Index'] = df['Pace_late'] / df['Pace_early']
 | 1.20~1.40 | 페이스 저하 뚜렷 — Hitting the Wall 진입 구간 |
 | 1.40~ | 심각한 페이스 붕괴 |
 
-### 2-2. Pacing Variance (페이스 분산)
+### 2-2. Pacing Variance
 
 9개 구간 페이스의 CV (Coefficient of Variation)로
 **페이스 일관성**을 측정합니다.
@@ -139,7 +139,7 @@ df['Pacing_Variance'] = df[pace_cols].std(axis=1) / df[pace_cols].mean(axis=1)
 
 ## 3. Model Training & Evaluation
 
-### 3-1. 평가 지표
+### 3-1. Evaluation Metrics
 
 $$
 \text{RMSE} = \sqrt{\frac{1}{n}\sum_{i=1}^{n}(\hat{y}_i - y_i)^2}
@@ -279,7 +279,7 @@ evaluate(lgbm, X_test, y_test)
 | `min_child_samples` | 20 | 과적합 방지 최소 샘플 수 |
 | `early_stopping` | 50 rounds | 검증 손실 개선 없으면 조기 종료 |
 
-### 3-6. 전체 파이프라인 요약
+### 3-6. Pipeline Summary
 
 ```
 Raw CSV

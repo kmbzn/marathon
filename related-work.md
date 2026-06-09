@@ -8,7 +8,7 @@ nav_order: 6
 
 ---
 
-## 1. 사용한 도구 · 라이브러리
+## 1. Tools & Libraries
 
 | 도구 / 라이브러리 | 버전 | 용도 |
 |:---|:---|:---|
@@ -22,7 +22,7 @@ nav_order: 6
 | **Seaborn** | 0.x | 통계적 시각화, 히트맵, 분포 플롯 |
 | **Jupyter Notebook** | — | EDA 및 프로토타이핑 환경 |
 
-### 설치
+### Installation
 
 ```bash
 pip install -r requirements.txt
@@ -39,7 +39,7 @@ jupyter
 
 ---
 
-## 2. 데이터셋
+## 2. Datasets
 
 | 이름 | 출처 | 설명 |
 |:---|:---|:---|
@@ -48,9 +48,9 @@ jupyter
 
 ---
 
-## 3. 관련 연구 · 참고 논문
+## 3. Related Work
 
-### 3-1. Hitting the Wall — 페이스 붕괴 분석
+### 3-1. Hitting the Wall — Pace Collapse Analysis
 
 **[1] Smyth, B. (2021). How recreational marathon runners hit the wall: A large-scale data analysis of late-race pacing collapse in the marathon.**
 *PLOS ONE*, 16(5), e0251513.
@@ -68,7 +68,7 @@ jupyter
 
 ---
 
-### 3-2. 완주 시간 예측 모델
+### 3-2. Finish Time Prediction Models
 
 **[3] Atterfors, J. & Lamm, J. (2023). Machine Learning of Pacing Patterns for Half Marathon.**
 *Springer Lecture Notes in Computer Science*.
@@ -101,7 +101,7 @@ jupyter
 
 ---
 
-### 3-3. 기상 조건과 마라톤 기록
+### 3-3. Weather Conditions & Marathon Performance
 
 **[7] Ely, M. R. et al. (2007). Impact of weather on marathon-running performance.**
 *Medicine & Science in Sports & Exercise*, 39(3), 487–493.
@@ -110,7 +110,7 @@ jupyter
 
 ---
 
-### 3-4. 데이터 결측치 처리 (2013 Boston Marathon)
+### 3-4. Missing Data Handling (2013 Boston Marathon)
 
 **[8] Hammerling, D. et al. (2014). Completing the Results of the 2013 Boston Marathon.**
 *PLOS ONE*, 9(4), e93800.
@@ -120,7 +120,7 @@ jupyter
 
 ---
 
-## 4. 참고 문서 · 튜토리얼
+## 4. Reference Documents
 
 | 제목 | 링크 | 설명 |
 |:---|:---|:---|

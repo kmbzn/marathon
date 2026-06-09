@@ -22,7 +22,7 @@ AI+X: Deep Learning (2026 Spring)
 
 ---
 
-## 분석 결과 보기
+## Results
 
 | 단계 | 설명 | 결과 페이지 | 노트북 |
 |------|------|-------------|--------|
@@ -33,7 +33,7 @@ AI+X: Deep Learning (2026 Spring)
 
 ---
 
-## 목차
+## Table of Contents
 
 1. [**Proposal**]({% link proposal.md %}) — 동기와 목표
 2. [**Datasets**]({% link dataset.md %}) — 보스턴 마라톤 데이터셋
