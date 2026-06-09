@@ -43,7 +43,7 @@ nav_order: 3
 ## 2. In-Race Split Times
 
 42.195km 코스 내 9개 구간의 통과 시간으로, 페이스 분석 및 Fatigue Index 산출의 핵심 변수입니다.
-모든 구간 시간은 `HH:MM:SS` 문자열로 수록되며, 전처리 단계에서 초(seconds) 단위 정수형으로 변환합니다.
+모든 구간 시간은 `HH:MM:SS` 문자열로 수록되며, 전처리 단계에서 seconds 단위 정수형으로 변환합니다.
 
 | 변수명 | 거리 | 비고 |
 |---|---|---|
@@ -56,7 +56,7 @@ nav_order: 3
 | `30K` | 30km | Hitting the Wall 기준 구간 |
 | `35K` | 35km | 페이스 저하 집중 관찰 구간 |
 | `40K` | 40km | — |
-| `Official Time` | 42.195km | 최종 완주 기록 (Target Variable) |
+| `Official Time` | 42.195km | Target Variable |
 
 ---
 

@@ -8,7 +8,7 @@ nav_order: 4
 
 ## 1. Data Preprocessing
 
-원본 데이터셋에는 중도 포기자(DNF), 문자열 형식의 시간 데이터, 범주형 변수 등
+원본 데이터셋에는 DNF, 문자열 형식의 시간 데이터, 범주형 변수 등
 분석에 바로 사용하기 어려운 요소들이 포함되어 있습니다.
 아래 순서로 전처리 파이프라인을 구성하였습니다.
 
@@ -29,7 +29,7 @@ print(df.isnull().sum())
 ### 1-2. 시간 데이터 변환
 
 모든 구간 시간은 `HH:MM:SS` 문자열로 수록되어 있습니다.
-회귀 모델 입력을 위해 **초(seconds) 단위 정수형**으로 변환합니다.
+회귀 모델 입력을 위해 **seconds 단위 정수형**으로 변환합니다.
 
 ```python
 def time_to_seconds(t: str) -> int:
@@ -112,7 +112,7 @@ df['Fatigue_Index'] = df['Pace_late'] / df['Pace_early']
 
 ### 2-2. Pacing Variance (페이스 분산)
 
-9개 구간 페이스의 변동계수(CV, Coefficient of Variation)로
+9개 구간 페이스의 CV (Coefficient of Variation)로
 **페이스 일관성**을 측정합니다.
 
 $$
@@ -147,7 +147,7 @@ $$
 R^2 = 1 - \frac{\sum(\hat{y}_i - y_i)^2}{\sum(\bar{y} - y_i)^2}
 $$
 
-- **RMSE**: 예측 오차를 초(seconds) 단위로 직관적으로 해석 가능
+- **RMSE**: 예측 오차를 seconds 단위로 직관적으로 해석 가능
 - **R² Score**: 모델이 완주 시간 분산을 얼마나 설명하는지 나타냄 (1.0에 가까울수록 우수)
 
 ```python

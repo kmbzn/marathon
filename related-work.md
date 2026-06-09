@@ -81,7 +81,7 @@ jupyter
 **[4] Journal of Technical Education Science (2025). Predicting Marathon Finishing Times Using Ensemble Learning: An Empirical Study on Boston Marathon Data.**
 [https://jte.edu.vn/index.php/jte/article/view/1924](https://jte.edu.vn/index.php/jte/article/view/1924)
 
-> 본 프로젝트와 동일한 Boston Marathon 2015–2017 데이터셋을 사용하여 KNN, ANN, LSTM, 앙상블 모델을 비교한 연구. 앙상블 모델(Linear Regression + Random Forest + MLPRegressor)이 **RMSE 11.06분, R² 0.928**로 최고 성능을 달성. 본 프로젝트의 모델 성능 비교 기준(Baseline)으로 활용.
+> 본 프로젝트와 동일한 Boston Marathon 2015–2017 데이터셋을 사용하여 KNN, ANN, LSTM, 앙상블 모델을 비교한 연구. Linear Regression + Random Forest + MLPRegressor ensemble이 **RMSE 11.06분, R² 0.928**로 최고 성능을 달성. 본 프로젝트의 모델 성능 Baseline으로 활용.
 
 ---
 

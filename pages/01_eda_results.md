@@ -5,7 +5,7 @@ nav_order: 1
 parent: "IV. Evaluation & Analysis"
 ---
 
-# 탐색적 데이터 분석 결과 (EDA)
+# EDA Results
 
 > **분석 노트북**: [`01_eda_visualization.ipynb`](https://colab.research.google.com/github/kmbzn/marathon/blob/main/notebooks/01_eda_visualization.ipynb)
 
@@ -87,6 +87,6 @@ Official Time 기초 통계
 | 10K 구간 기록 | 0.938 |
 | 5K 구간 기록 | 0.917 |
 | Fatigue Index | 0.400 |
-| 나이 (Age) | 0.230 |
+| Age | 0.230 |
 
 초반 페이스가 빠를수록 최종 기록이 좋은 강한 선형 관계가 존재합니다. **Fatigue Index(피로도 지수)** 도 완주 시간과 유의미한 상관(0.400)을 보여, 후반부 페이스 관리가 중요함을 시사합니다.

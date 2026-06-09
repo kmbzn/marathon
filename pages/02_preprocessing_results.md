@@ -17,14 +17,14 @@ parent: "IV. Evaluation & Analysis"
 원본 데이터 (26,598행)
     │
     ▼
-1. 시간 문자열 → 초(seconds) 변환  (HH:MM:SS → int)
+1. 시간 문자열 → seconds 변환  (HH:MM:SS → int)
     │
     ▼
 2. 결측치·DNF 제거
    (5K, 10K, 30K, 40K, Official Time 기준)
     │
     ▼
-3. 피처 엔지니어링 (Fatigue Index, Pacing Variance)
+3. Feature Engineering (Fatigue Index, Pacing Variance)
     │
     ▼
 유효 데이터 (26,357행)  →  241행 제거
@@ -50,7 +50,7 @@ parent: "IV. Evaluation & Analysis"
 
 ```
 Fatigue_Index = (40K_s - 30K_s) / 10  ÷  (10K_s / 10)
-              = 후반 10K 페이스(sec/km) / 초반 10K 페이스(sec/km)
+              = late 10K pace (sec/km) / early 10K pace (sec/km)
 ```
 
 | 해석 | 의미 |
@@ -73,7 +73,7 @@ FI > 1.2  (페이스 20% 이상 저하):  20.5%  → 5명 중 1명이 심각한 
 
 ---
 
-## 구간별 평균 페이스 (Hitting the Wall 시각화)
+## Average Pace per Split (Hitting the Wall)
 
 | 구간 | 평균 페이스 | 초반 대비 변화 |
 |------|-------------|----------------|
@@ -92,7 +92,7 @@ FI > 1.2  (페이스 20% 이상 저하):  20.5%  → 5명 중 1명이 심각한 
 
 ## Pacing Variance (페이스 일관성 지표)
 
-구간별 페이스(sec/km)의 표준편차로 계산합니다. 값이 작을수록 일정한 페이스를 유지한 러너입니다.
+pace (sec/km)의 표준편차로 계산합니다. 값이 작을수록 일정한 페이스를 유지한 러너입니다.
 
 ```
 Official Time과의 상관계수: 0.412
