@@ -4,7 +4,17 @@
       "WebFetch(domain:api.github.com)",
       "Bash(git push *)",
       "Bash(python3 -c \"import pandas, matplotlib, seaborn, numpy; print\\('OK'\\)\")",
-      "Bash(grep -rnoP '[가-힣][가-힣\\\\s·\\\\-]*\\\\\\([A-Za-z][^\\)]{1,50}\\\\\\)' /home/kmbzn/workspace/marathon --include=\"*.md\")"
+      "Bash(grep -rnoP '[가-힣][가-힣\\\\s·\\\\-]*\\\\\\([A-Za-z][^\\)]{1,50}\\\\\\)' /home/kmbzn/workspace/marathon --include=\"*.md\")",
+      "Bash(git stash *)",
+      "Bash(jupyter nbconvert *)",
+      "Bash(python3 -c \"import nbconvert; print\\('ok'\\)\")",
+      "Bash(python3 -m jupyter --version)",
+      "Bash(python3 -c ' *)",
+      "Bash(python3)",
+      "Bash(pip install *)",
+      "Bash(python3 -c \"import xgboost, lightgbm; print\\('OK'\\)\")",
+      "Bash(python3 -c \"import xgboost; print\\('xgboost OK'\\)\")",
+      "Bash(python3 -c \"import lightgbm; print\\('lgbm OK'\\)\")"
     ]
   }
 }
