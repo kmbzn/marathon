@@ -26,21 +26,21 @@ AI+X: Deep Learning (2026 Spring)
 
 | 단계 | 설명 | 결과 페이지 | 노트북 |
 |------|------|-------------|--------|
-| 1. EDA | 성별·나이 분포, 상관관계 시각화 | [보기]({% link pages/01_eda_results.md %}) | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/kmbzn/marathon/blob/main/notebooks/01_eda_visualization.ipynb) |
-| 2. 전처리 & 피처 엔지니어링 | Fatigue Index, Pacing Variance 산출 | [보기]({% link pages/02_preprocessing_results.md %}) | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/kmbzn/marathon/blob/main/notebooks/02_preprocessing_and_feature_engineering.ipynb) |
-| 3. 모델 학습 & 평가 | RMSE/R² 비교, 피처 중요도 분석 | [보기]({% link pages/03_modeling_results.md %}) | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/kmbzn/marathon/blob/main/notebooks/03_modeling_and_evaluation.ipynb) |
-| 4. 인사이트 & 결론 | Hitting the Wall 분석, 페이스 전략 제안 | [보기]({% link pages/04_insights.md %}) | — |
+| 1. EDA | 성별·나이 분포, 상관관계 시각화 | [보기]({{ site.baseurl }}{% link pages/01_eda_results.md %}) | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/kmbzn/marathon/blob/main/notebooks/01_eda_visualization.ipynb) |
+| 2. 전처리 & 피처 엔지니어링 | Fatigue Index, Pacing Variance 산출 | [보기]({{ site.baseurl }}{% link pages/02_preprocessing_results.md %}) | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/kmbzn/marathon/blob/main/notebooks/02_preprocessing_and_feature_engineering.ipynb) |
+| 3. 모델 학습 & 평가 | RMSE/R² 비교, 피처 중요도 분석 | [보기]({{ site.baseurl }}{% link pages/03_modeling_results.md %}) | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/kmbzn/marathon/blob/main/notebooks/03_modeling_and_evaluation.ipynb) |
+| 4. 인사이트 & 결론 | Hitting the Wall 분석, 페이스 전략 제안 | [보기]({{ site.baseurl }}{% link pages/04_insights.md %}) | — |
 
 ---
 
 ## Table of Contents
 
-1. [**Proposal**]({% link proposal.md %}) — 동기와 목표
-2. [**Datasets**]({% link dataset.md %}) — 보스턴 마라톤 데이터셋
-3. [**Methodology**]({% link methodology.md %}) — 전처리 · 피처 · 모델
-4. [**Evaluation & Analysis**]({% link evaluation.md %}) — 결과 · 그래프 · 지표
-5. [**Related Work**]({% link related-work.md %}) — 참고 자료 · 도구
-6. [**Conclusion**]({% link conclusion.md %}) — 논의 · 역할분담 · 발표 영상
+1. [**Proposal**]({{ site.baseurl }}{% link proposal.md %}) — 동기와 목표
+2. [**Datasets**]({{ site.baseurl }}{% link dataset.md %}) — 보스턴 마라톤 데이터셋
+3. [**Methodology**]({{ site.baseurl }}{% link methodology.md %}) — 전처리 · 피처 · 모델
+4. [**Evaluation & Analysis**]({{ site.baseurl }}{% link evaluation.md %}) — 결과 · 그래프 · 지표
+5. [**Related Work**]({{ site.baseurl }}{% link related-work.md %}) — 참고 자료 · 도구
+6. [**Conclusion**]({{ site.baseurl }}{% link conclusion.md %}) — 논의 · 역할분담 · 발표 영상
 
 ---
 
