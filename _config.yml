@@ -2,7 +2,8 @@
 title: 마라톤 완주 시간 예측
 logo: "/logo.png"
 description: 인구통계학적 특성과 대기 온도를 반영한 머신러닝 기반 마라톤 완주 시간 예측
-url: "https://aix-project.kro.kr"
+url: "https://kmbzn.github.io"
+baseurl: "/marathon"
 lang: ko
 
 # ── Theme: just-the-docs (GitHub Pages remote theme) ──
