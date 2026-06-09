@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:api.github.com)",
+      "Bash(git push *)",
+      "Bash(python3 -c \"import pandas, matplotlib, seaborn, numpy; print\\('OK'\\)\")",
+      "Bash(grep -rnoP '[가-힣][가-힣\\\\s·\\\\-]*\\\\\\([A-Za-z][^\\)]{1,50}\\\\\\)' /home/kmbzn/workspace/marathon --include=\"*.md\")"
+    ]
+  }
+}
