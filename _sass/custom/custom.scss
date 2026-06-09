@@ -1,8 +1,16 @@
-.site-header {
-  text-align: center;
-  padding-top: 1.5rem;
+// 사이드바 로고 가운데 정렬 및 상단 여백
+.site-title {
+  justify-content: center !important;
+  padding-top: 2rem !important;
+  padding-bottom: 1rem !important;
 }
 
 .site-logo {
-  display: inline-block;
+  background-position: center center !important;
+  min-height: 4.5rem !important;
+}
+
+// "This site uses Just the Docs" 문구 제거
+.site-footer {
+  display: none !important;
 }
