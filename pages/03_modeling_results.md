@@ -30,15 +30,13 @@ parent: "IV. Evaluation & Analysis"
 
 | 모델 | RMSE | R² |
 |------|------|-----|
-| **Ridge Regression** | **1.62분 (97초)** | **0.9983** |
-| Lasso Regression | 1.65분 (99초) | 0.9983 |
-| Random Forest | 1.66분 (99초) | 0.9983 |
-| XGBoost* | — | — |
-| LightGBM* | — | — |
+| **Ridge Regression** | **1.61분 (97초)** | **0.9984** |
+| Lasso Regression | 1.61분 (97초) | 0.9984 |
+| Random Forest | 1.99분 (119초) | 0.9975 |
+| XGBoost | 2.86분 (172초) | 0.9948 |
+| LightGBM | 2.78분 (167초) | 0.9951 |
 
-> *XGBoost / LightGBM은 설치 환경에 따라 추가 실행 가능 (`pip install xgboost lightgbm`)
-
-**해석**: 30K 기록까지 알고 있을 때 완주 시간을 평균 **±1.6분** 오차로 예측합니다. R² 0.9983은 분산의 99.83%를 모델이 설명함을 의미합니다.
+**해석**: 30K 기록까지 알고 있을 때 완주 시간을 평균 **±1.6분** 오차로 예측합니다. 30K 누적 기록이 최종 기록과 거의 선형적으로 연결되기 때문에 Ridge 같은 선형 모델이 가장 우수한 성능을 보입니다.
 
 ---
 
@@ -46,10 +44,12 @@ parent: "IV. Evaluation & Analysis"
 
 | 모델 | RMSE | R² |
 |------|------|-----|
-| Ridge (Early) | 5.37분 | 0.9821 |
-| **Random Forest (Early)** | **3.99분** | **0.9901** |
+| Ridge (Early) | 5.37분 (322초) | 0.9821 |
+| **Random Forest (Early)** | **4.00분 (240초)** | **0.9901** |
+| XGBoost (Early) | 4.32분 (259초) | 0.9884 |
+| LightGBM (Early) | 4.35분 (261초) | 0.9882 |
 
-**해석**: 레이스 초반 10K 기록만으로도 완주 시간을 평균 **±4분** 오차로 예측합니다. R² 0.990 수준으로, 초반 페이스 설정이 최종 기록과 매우 강한 상관성을 가짐을 확인합니다.
+**해석**: 레이스 초반 10K 기록만으로도 완주 시간을 평균 **±4분** 오차로 예측합니다. Early Prediction에서는 비선형 모델(RF)이 선형 모델을 앞서며, 초반 페이스와 최종 기록 사이의 복잡한 패턴을 더 잘 포착합니다.
 
 ---
 
@@ -57,13 +57,17 @@ parent: "IV. Evaluation & Analysis"
 
 ```
 === Full Model ===
-Ridge               RMSE = 1.62 min (97s)   R² = 0.9983
-Lasso               RMSE = 1.65 min (99s)   R² = 0.9983
-Random Forest       RMSE = 1.66 min (99s)   R² = 0.9983
+Ridge               RMSE = 1.61 min (97s)    R² = 0.9984
+Lasso               RMSE = 1.61 min (97s)    R² = 0.9984
+Random Forest       RMSE = 1.99 min (119s)   R² = 0.9975
+XGBoost             RMSE = 2.86 min (172s)   R² = 0.9948
+LightGBM            RMSE = 2.78 min (167s)   R² = 0.9951
 
 === Early Prediction (10K 기준) ===
-Ridge (Early)       RMSE = 5.37 min         R² = 0.9821
-RF (Early)          RMSE = 3.99 min         R² = 0.9901
+Ridge (Early)       RMSE = 5.37 min (322s)   R² = 0.9821
+RF (Early)          RMSE = 4.00 min (240s)   R² = 0.9901
+XGBoost (Early)     RMSE = 4.32 min (259s)   R² = 0.9884
+LightGBM (Early)    RMSE = 4.35 min (261s)   R² = 0.9882
 ```
 
 ---
@@ -72,10 +76,10 @@ RF (Early)          RMSE = 3.99 min         R² = 0.9901
 
 | 순위 | 피처 | 중요도 |
 |------|------|--------|
-| 1 | `30K_s` (30K 누적 기록) | **0.9659** |
-| 2 | `Fatigue_Index` | 0.0298 |
-| 3 | `25K_s` | 0.0009 |
-| 4 | `10K_s` | 0.0008 |
+| 1 | `30K_s` (30K 누적 기록) | **0.9656** |
+| 2 | `Fatigue_Index` | 0.0178 |
+| 3 | `Pacing_Variance` | 0.0128 |
+| 4 | `25K_s` | 0.0009 |
 | 5 | `Half_s` | 0.0007 |
 | 6–11 | 나머지 구간 기록, Age, Gender | < 0.001 |
 

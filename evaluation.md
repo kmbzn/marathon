@@ -33,7 +33,7 @@ has_children: true
 
 - **30K 이후 구간**에서 전체 러너의 페이스가 유의미하게 감소하는 "Wall" 현상이 확인되었다.
 - 초반 10K 페이스가 빠를수록(과속 출발) 30K 이후 페이스 저하폭이 크게 나타났으며, 이는 페이스 일관성의 중요성을 시사한다.
-- 파생 변수 **Fatigue Index** (30K 이후 페이스 / 초반 10K 페이스)의 분포는 완주 시간과 강한 양의 상관관계를 보였다 (r ≈ 0.81).
+- 파생 변수 **Fatigue Index** (30K 이후 페이스 / 초반 10K 페이스)의 분포는 완주 시간과 양의 상관관계를 보였다 (r = 0.400).
 
 ### 1-4. Feature Correlation
 
@@ -42,10 +42,9 @@ has_children: true
 | 변수 쌍 | Pearson r | 해석 |
 |:---|---:|:---|
 | Half — Official Time | 0.97 | 중간 기록이 완주 시간의 가장 강력한 예측 변수 |
-| 30K — Official Time | 0.96 | 30K 통과 시간도 매우 높은 상관 |
-| Fatigue Index — Official Time | 0.81 | 페이스 유지력이 기록에 직접적 영향 |
-| Temperature — Official Time | 0.34 | 기온은 중간 수준의 정(+)의 상관 |
-| Age — Official Time | 0.21 | 나이와 완주 시간은 약한 정(+)의 상관 |
+| 30K — Official Time | **0.984** | 30K 통과 시간도 매우 높은 상관 |
+| Fatigue Index — Official Time | 0.400 | 페이스 유지력이 기록에 직접적 영향 |
+| Age — Official Time | 0.230 | 나이와 완주 시간은 약한 정(+)의 상관 |
 
 ---
 
@@ -53,60 +52,73 @@ has_children: true
 
 ### 2-1. Fatigue Index
 - 값이 **1.0에 가까울수록** 페이스를 일관되게 유지한 러너
-- 값이 **1.3 이상**이면 후반부에 심각한 페이스 저하가 발생한 것으로 판단
-- 전체 데이터셋 평균 Fatigue Index: **1.24** (표준편차 ±0.18)
+- 값이 **1.2 이상**이면 후반부에 심각한 페이스 저하가 발생한 것으로 판단
+- 전체 데이터셋 평균 Fatigue Index: **1.126** (중앙값 1.094)
+- FI > 1.1 비율: **47.9%** — 전체 러너의 절반 가까이가 후반 페이스 저하 경험
 
 ### 2-2. Pacing Variance
-- 완주 시간이 짧은 상위 10% 러너의 Pacing Variance는 평균 **0.07** 수준
-- 완주 시간이 긴 하위 10% 러너의 Pacing Variance는 평균 **0.19** 수준으로 약 2.7배 차이
+- 구간별 페이스(sec/km)의 표준편차로 정의. 값이 작을수록 일정한 페이스 유지
+- Official Time과의 상관계수: **0.572** — 페이스 편차가 클수록 완주 시간이 느린 경향
 
 ---
 
 ## 3. Model Performance Comparison
 
-> RMSE unit: seconds. Values in parentheses are in minutes.
+> RMSE unit: seconds. Values in parentheses are in minutes. Full Model uses features up to 30K split.
+
+### 3-0. Full Model (up to 30K)
 
 | Model | RMSE | R² Score | MAE | 비고 |
 |:------|-----:|---------:|----:|:---|
-| Ridge Regression | 892s (14.9분) | 0.831 | 701s | 기준 선형 모델 |
-| Lasso Regression | 908s (15.1분) | 0.825 | 714s | 변수 선택 효과 미미 |
-| Random Forest | 651s (10.9분) | 0.912 | 498s | 비선형 패턴 포착 |
-| XGBoost | 574s (9.6분) | 0.934 | 441s | 최적 하이퍼파라미터 적용 |
-| **LightGBM** | **541s (9.0분)** | **0.941** | **418s** | **최고 성능** |
+| **Ridge Regression** | **97s (1.61분)** | **0.9984** | **57s** | **최고 성능** |
+| Lasso Regression | 97s (1.61분) | 0.9984 | 57s | — |
+| Random Forest | 119s (1.99분) | 0.9975 | 52s | — |
+| XGBoost | 172s (2.86분) | 0.9948 | 59s | — |
+| LightGBM | 167s (2.78분) | 0.9951 | 55s | — |
 
-> 📌 선행 연구(Boston Marathon 2015–2017 데이터 앙상블 모델)에서 보고된 RMSE 11.06분, R² 0.928과 비교해 LightGBM 단일 모델이 유사하거나 우수한 수준의 성능을 달성하였다.
+30K 누적 기록이 완주 시간과 거의 선형 관계이기 때문에 Ridge 같은 선형 모델이 가장 우수한 성능을 보였다.
+
+### 3-0b. Early Model (up to 10K)
+
+| Model | RMSE | R² Score | 비고 |
+|:------|-----:|---------:|:---|
+| Ridge (Early) | 322s (5.37분) | 0.9821 | — |
+| **Random Forest (Early)** | **240s (4.00분)** | **0.9901** | **최고 성능** |
+| XGBoost (Early) | 259s (4.32분) | 0.9884 | — |
+| LightGBM (Early) | 261s (4.35분) | 0.9882 | — |
+
+10K 기록만 사용하는 Early Prediction에서는 비선형 모델(RF)이 선형 모델을 앞선다.
 
 ### 3-1. Performance Visualization
 
 ![모델 성능 비교 바 차트]({{ '/assets/img/model_comparison.png' | relative_url }})
 
-### 3-2. LightGBM — Predicted vs Actual
+### 3-2. Ridge Regression — Predicted vs Actual
 
 ![예측값 vs 실제값 산점도]({{ '/assets/img/pred_vs_actual.png' | relative_url }})
 
 - 대부분의 예측값이 **y = x 대각선 근처에 밀집**하여 안정적인 예측력을 확인
 - 완주 시간 **4시간 이상 구간**에서 예측 오차가 다소 증가하는 경향 (이 구간 러너의 페이스 변동성이 크기 때문)
+- 잔차의 95% 구간: **±2.8분** 이내, |>5분| 오차: 전체의 약 1.2%
 
-### 3-3. Feature Importance (LightGBM)
+### 3-3. Feature Importance (Random Forest)
 
 ![변수 중요도]({{ '/assets/img/feature_importance.png' | relative_url }})
 
 | 순위 | 변수 | 중요도 | 해석 |
 |:---:|:---|---:|:---|
-| 1 | `Half` (중간 기록) | 0.341 | 단일 변수 중 예측력 최고 |
-| 2 | `30K` | 0.198 | Wall 이전 마지막 주요 체크포인트 |
-| 3 | `Fatigue Index` | 0.157 | 파생 변수 중 기여도 1위 |
-| 4 | `25K` | 0.089 | — |
-| 5 | `Pacing Variance` | 0.072 | 페이스 일관성 지표 |
-| 6 | `Temperature` | 0.048 | 환경 변수 중 가장 영향력 큼 |
-| 7 | `Age` | 0.031 | — |
-| 8 | `M/F` | 0.024 | — |
+| 1 | `30K_s` (30K 누적 기록) | 0.9656 | 예측력의 96.6% 차지 |
+| 2 | `Fatigue_Index` | 0.0178 | 파생 변수 중 기여도 1위 |
+| 3 | `Pacing_Variance` | 0.0128 | 페이스 일관성 지표 |
+| 4 | `25K_s` | 0.0009 | — |
+| 5 | `Half_s` | 0.0007 | — |
+| 6–11 | 나머지 구간 기록, Age, Gender | < 0.001 | — |
 
 ---
 
 ## 4. Insights Summary
 
-- **페이스 일관성이 기록을 결정한다**: Fatigue Index와 Pacing Variance 두 파생 변수가 나이·성별·기온보다 완주 시간 예측에 더 높은 기여도를 보였다. 이는 "얼마나 빠른가"보다 "얼마나 일정하게 달리는가"가 핵심임을 의미한다.
-- **Half의 압도적 예측력**: 21km 지점 기록 하나만으로도 최종 완주 시간의 상당 부분을 설명할 수 있었다.
-- **기온 임계 효과**: 기온은 선형적 영향이 아니라 특정 구간(약 20°C 이상)을 넘으면 페이스 저하가 가속화되는 비선형 패턴을 보였다.
-- **앙상블 모델의 우위**: Ridge 대비 LightGBM은 RMSE 기준 약 39% 감소, R²는 0.831 → 0.941로 향상되었다.
+- **30K 기록이 완주 시간을 결정한다**: RF 피처 중요도에서 30K 누적 기록이 예측력의 96.6%를 차지했다. 30K까지의 페이스가 최종 기록을 사실상 결정한다.
+- **선형 모델이 Full Model에서 최고 성능**: 30K 기록과 완주 시간의 관계가 거의 선형이기 때문에 Ridge Regression이 RMSE 1.61분(R²=0.9984)으로 XGBoost·LightGBM을 제쳤다.
+- **비선형 모델은 Early Prediction에서 강세**: 10K 기록만 사용하는 시나리오에서는 Random Forest(RMSE 4.00분)가 선형 모델(5.37분)보다 우수하다. 초반 페이스와 최종 기록의 관계는 비선형 패턴이 강하다.
+- **페이스 일관성이 나이·성별보다 중요**: Pacing Variance(r=0.572)와 Fatigue Index(r=0.400)가 Age(r=0.230)보다 완주 시간과의 상관이 높다.

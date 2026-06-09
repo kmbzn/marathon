@@ -60,4 +60,4 @@ AI+X: Deep Learning (2026 Spring)
 - 전체 러너의 **47.9%**가 후반부에 10% 이상 페이스 저하를 경험 (Hitting the Wall)
 - **30K 기록**이 완주 시간 예측 기여도의 **96.6%** 차지 (Random Forest Feature Importance)
 - 10K 기록만으로도 완주 시간을 **±4분 오차**로 예측 가능 (R² = 0.990)
-- Ridge Regression RMSE **1.62분**, R² **0.9983** 달성
+- Ridge Regression RMSE **1.61분**, R² **0.9984** 달성 (Full Model 최고 성능)
