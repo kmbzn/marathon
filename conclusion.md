@@ -10,7 +10,7 @@ nav_order: 7
 
 ## Discussion
 
-### 핵심 인사이트
+### Insight
 
 **Hitting the Wall의 보편성**
 
@@ -43,12 +43,11 @@ Ridge/Lasso 등 선형 회귀 모델 대비 XGBoost·LightGBM이 유의미하게
 - 예측 모델을 기반으로 목표 완주 시간에 최적화된 구간별 페이스 플랜을 역산하는 추천 시스템으로 확장한다.
 
 
-## 역할 분담 (Contributions)
+## Contributions
 
-| 멤버 | 담당 |
-|:-----|:-----|
-| 양종빈 | 데이터 & 전처리 — 결측치 처리, 시간 변환, 인코딩 등 파이프라인 구축 |
-| 성시훈 | EDA & 시각화 — 나이/성별/기온 분석, Hitting the Wall 시각화, 구간 페이스 패턴 탐색 |
-| 김병준 | Feature Engineering & 모델링 — Fatigue Index 설계, Ridge/Lasso/RF/XGBoost/LightGBM 학습 및 튜닝 |
-| 임성현 | 평가 & 인사이트 — RMSE/R² 비교, 페이스 전략 도출, 문서화(README, 발표자료) |
-
+| 멤버 | 담당
+| - | - 
+| 양종빈 | 데이터 & 전처리 — 결측치 처리, 시간 변환, 인코딩 등 파이프라인 구축
+| 성시훈 | EDA & 시각화 — 나이/성별/기온 분석, Hitting the Wall 시각화, 구간 페이스 패턴 탐색
+| 김병준 | Blog 프론트 디자인, Feature Engineering & 모델링 — Fatigue Index 설계, Ridge/Lasso/RF/XGBoost/LightGBM 학습 및 튜닝
+| 임성현 | 평가 & 인사이트 — RMSE/R² 비교, 페이스 전략 도출, 문서화

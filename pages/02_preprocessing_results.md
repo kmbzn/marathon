@@ -11,7 +11,7 @@ parent: "IV. Evaluation & Analysis"
 
 ---
 
-## 전처리 파이프라인
+## Preprocessing Pipelines
 
 ```
 원본 데이터 (26,598행)
@@ -112,5 +112,3 @@ Official Time과의 상관계수: 0.412
 | `5K_s` ~ `30K_s` | 수치 | 각 구간 누적 통과 시간(초) |
 
 총 학습 샘플: **26,357개**
-
----
